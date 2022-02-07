@@ -94,32 +94,32 @@ Stack has these common methods:
 Array in Javascript has the attributes of Stack, but we construct a Stack from scratch by using function Stack()
 
 **Example:**<br>
-function Stack() {
-this.count = 0;
-  this.storage = {};
+function Stack() {<br>
+this.count = 0;<br>
+  this.storage = {};<br>
 
-  this.push = function (value) {
-    this.storage[this.count] = value;
-    this.count++;
-  }
+  this.push = function (value) {<br>
+    this.storage[this.count] = value;<br>
+    this.count++;<br>
+  }<br>
 
-  this.pop = function () {
-    if (this.count === 0) {
-      return undefined;
-    }
-    this.count--;
-    var result = this.storage[this.count];
-    delete this.storage[this.count];
-    return result;
-  }
+  this.pop = function () {<br>
+    if (this.count === 0) {<br>
+      return undefined;<br>
+    }<br>
+    this.count--;<br>
+    var result = this.storage[this.count];<br>
+    delete this.storage[this.count];<br>
+    return result;<br>
+  }<br>
 
-  this.peek = function () {
-    return this.storage[this.count - 1];
-  }
+  this.peek = function () {<br>
+    return this.storage[this.count - 1];<br>
+  }<br>
 
-  this.size = function () {
-    return this.count;
-  }
+  this.size = function () {<br>
+    return this.count;<br>
+  }<br>
 }<br>
 ## 2.Queue:
 Queue is similar to Stack. The only difference is that Queue uses the FIFO principle (First In First Out). In other words, when you queue for bus, the first in the queue will always board first.<br>
@@ -132,27 +132,27 @@ Queue has following methods:<br>
 * size: get the number of element(s) in queue
 
 **Example:**<br>
-function Queue() {
-  var collection = [];
-  this.print = function () {
-    console.log(collection);
-  }
-  this.enqueue = function (element) {
-    collection.push(element);
-  }
-  this.dequeue = function () {
-    return collection.shift();
-  }
-  this.front = function () {
-    return collection[0];
-  }
+function Queue() {<br>
+  var collection = [];<br>
+  this.print = function () {<br>
+    console.log(collection);<br>
+  }<br>
+  this.enqueue = function (element) {<br>
+    collection.push(element);<br>
+  }<br>
+  this.dequeue = function () {<br>
+    return collection.shift();<br>
+  }<br>
+  this.front = function () {<br>
+    return collection[0];<br>
+  }<br>
 
-  this.isEmpty = function () {
-    return collection.length === 0;
-  }
-  this.size = function () {
-    return collection.length;
-  }
+  this.isEmpty = function () {<br>
+    return collection.length === 0;<br>
+  }<br>
+  this.size = function () {<br>
+    return collection.length;<br>
+  }<br>
 }<br>
 ## 3.Linked list:
 Literally, a linked list is a chained data structure, with each node consisting of two pieces of information: the data of the node and the pointer to the next node. Linked list and conventional array are both linear data structures with serialised storage. Of course, they also have differences:<br>
@@ -168,15 +168,15 @@ A unilateral linked list normally has following methods:
 * removeAt: Delete a node at a specific index
   
 **Example:**<br>
-function LinkedList() {  
-        var length = 0;  
-        var head = null;  
-        this.size = function () {    
-            return length;  
-        }  
-        this.head = function () {    
-            return head;
-        }
+function LinkedList() {  <br>
+        var length = 0;  <br>
+        var head = null;  <br>
+        this.size = function () {    <br>
+            return length;  <br>
+        }  <br>
+        this.head = function () {    <br>
+            return head;<br>
+        }<br>
 }<br>
 ## 4.Set:
 A set is a basic concept in mathematics: a collection of well defined and distinct objects. ES6 introduced the concept of set, which has certain level of similarity with array. However, a set does not allow repeating elements and is not indexed.
@@ -193,14 +193,14 @@ A typical set has methods as follows:<br>
 * difference: Return the difference of two sets
 * subset: Determine whether a certain set is a subset of another set<br>
 **Example:**<br>
-function MySet() {  
-    var collection = [];  
-    this.has = function (element) {    
-        return (collection.indexOf(element) !== -1);  
-    }  
-    this.values = function () {    
-        return collection;
-    }
+function MySet() {  <br>
+    var collection = [];  <br>
+    this.has = function (element) {    <br>
+        return (collection.indexOf(element) !== -1);  <br>
+    }  <br>
+    this.values = function () {    <br>
+        return collection;<br>
+    }<br>
 }<br>
 ## 5.Hash table:
 A hash table is a key-value data structure. Due to the lightning speed of querying a value through key, it is commonly used in Map, Dictionary or Object data structures. As shown in the graph above, the hash table uses a hash function to convert keys into a list of numbers, and these numbers serve as the values of corresponding keys. To get value using key is dashingly fast, time complexity can achieve O(1). The same keys must return the same values — this is the basis of the hash function.<br>
