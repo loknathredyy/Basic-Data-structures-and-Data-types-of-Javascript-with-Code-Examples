@@ -2,7 +2,7 @@
 
 * JavaScript has primitive and non-primitive data structures. 
 * Primitive data structures and data types are native to the programming language.
-* These include boolean, null, number, string, etc. ...
+* These include boolean, null, number, string, etc...
 * These include linear data structures, static data structures, and dynamic data structures, like queue and linked lists.
 
 # Data types
